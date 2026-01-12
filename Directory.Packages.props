@@ -1,0 +1,76 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <!-- Prism MVVM Framework -->
+    <PackageReference Update="Prism.DryIoc" Version="9.0.537" />
+    <PackageReference Update="Prism.Unity" Version="9.0.537" />
+    
+    <!-- Selenium WebDriver -->
+    <PackageReference Update="Selenium.WebDriver" Version="4.27.0" />
+    <PackageReference Update="Selenium.Support" Version="4.27.0" />
+    <PackageReference Update="Selenium.WebDriver.ChromeDriver" Version="131.0.6778.8500" />
+    
+    <!-- HTTP Client -->
+    <PackageReference Update="RestSharp" Version="112.1.0" />
+    
+    <!-- Entity Framework Core -->
+    <PackageReference Update="Microsoft.EntityFrameworkCore" Version="8.0.11" />
+    <PackageReference Update="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.11" />
+    <PackageReference Update="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.11" />
+    <PackageReference Update="Microsoft.EntityFrameworkCore.Proxies" Version="8.0.11" />
+    <PackageReference Update="Microsoft.EntityFrameworkCore.Tools" Version="8.0.11" />
+    <PackageReference Update="Microsoft.EntityFrameworkCore.Design" Version="8.0.11" />
+    
+    <!-- JSON -->
+    <PackageReference Update="Newtonsoft.Json" Version="13.0.3" />
+    
+    <!-- Logging -->
+    <PackageReference Update="Microsoft.Extensions.Logging" Version="8.0.1" />
+    <PackageReference Update="Microsoft.Extensions.Logging.Abstractions" Version="8.0.2" />
+    <PackageReference Update="Microsoft.Extensions.Logging.Console" Version="8.0.1" />
+    <PackageReference Update="Serilog" Version="4.2.0" />
+    <PackageReference Update="Serilog.Extensions.Logging" Version="8.0.0" />
+    <PackageReference Update="Serilog.Sinks.File" Version="6.0.0" />
+    <PackageReference Update="Serilog.Sinks.Console" Version="6.0.0" />
+    
+    <!-- Configuration -->
+    <PackageReference Update="Microsoft.Extensions.Configuration" Version="8.0.0" />
+    <PackageReference Update="Microsoft.Extensions.Configuration.Json" Version="8.0.1" />
+    <PackageReference Update="Microsoft.Extensions.Configuration.Binder" Version="8.0.2" />
+    <PackageReference Update="Microsoft.Extensions.Options" Version="8.0.2" />
+    <PackageReference Update="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
+    
+    <!-- Dependency Injection -->
+    <PackageReference Update="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />
+    <PackageReference Update="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.2" />
+    
+    <!-- HTTP -->
+    <PackageReference Update="Microsoft.Extensions.Http" Version="8.0.1" />
+    
+    <!-- Blazor WebAssembly -->
+    <PackageReference Update="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.11" />
+    <PackageReference Update="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.11" />
+    <PackageReference Update="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.11" />
+    <PackageReference Update="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="8.0.11" />
+    
+    <!-- ASP.NET Core Identity -->
+    <PackageReference Update="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.11" />
+    <PackageReference Update="Microsoft.AspNetCore.Identity.UI" Version="8.0.11" />
+    <PackageReference Update="Microsoft.AspNetCore.ApiAuthorization.IdentityServer" Version="8.0.11" />
+    <PackageReference Update="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.11" />
+    
+    <!-- UI Components -->
+    <PackageReference Update="Ookii.Dialogs.Wpf" Version="5.0.1" />
+    
+    <!-- Testing -->
+    <PackageReference Update="xunit" Version="2.9.3" />
+    <PackageReference Update="xunit.runner.visualstudio" Version="2.8.2" />
+    <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageReference Update="Moq" Version="4.20.72" />
+    <PackageReference Update="FluentAssertions" Version="7.0.0" />
+    <PackageReference Update="coverlet.collector" Version="6.0.2" />
+  </ItemGroup>
+</Project>

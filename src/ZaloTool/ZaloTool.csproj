@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>MmoTool.ZaloTool</AssemblyName>
+    <RootNamespace>MmoTool.ZaloTool</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Images\delete.png" />
+    <None Remove="Assets\Images\relogin.png" />
+    <None Remove="Assets\Images\updated.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Images\delete.png" />
+    <EmbeddedResource Include="Assets\Images\relogin.png" />
+    <EmbeddedResource Include="Assets\Images\updated.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" />
+    <PackageReference Include="Newtonsoft.Json" />
+    <PackageReference Include="Prism.DryIoc" />
+    <PackageReference Include="RestSharp" />
+    <PackageReference Include="Selenium.Support" />
+    <PackageReference Include="Selenium.WebDriver" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+    <PackageReference Include="Microsoft.Extensions.Logging" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MmoTool.Shared\MmoTool.Shared.csproj" />
+    <ProjectReference Include="..\MmoTool.Core\MmoTool.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

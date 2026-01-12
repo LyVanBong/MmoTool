@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FacebookTool", "FacebookTool\FacebookTool.csproj", "{485AF56C-4414-4D7C-8158-D4853DBAC64A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FacebookTool", "src\FacebookTool\FacebookTool.csproj", "{485AF56C-4414-4D7C-8158-D4853DBAC64A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScannerTool", "ScannerTool\ScannerTool.csproj", "{4C7860E0-CB3F-4F91-8802-4CA433D313F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScannerTool", "src\ScannerTool\ScannerTool.csproj", "{4C7860E0-CB3F-4F91-8802-4CA433D313F7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MmoTool.Shared", "src\MmoTool.Shared\MmoTool.Shared.csproj", "{B8E5F0D1-1C9C-4D2A-8B8E-4E90B7D1A2C3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MmoTool.Core", "src\MmoTool.Core\MmoTool.Core.csproj", "{C9A1B2D3-E4F5-4D6F-8A9B-0C1D2E3F4A5B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Setups", "Setups", "{6C0ECC07-68AC-4494-87AE-D40CCE1D2ECB}"
 EndProject
@@ -13,15 +17,17 @@ Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "FacebookTool", "Setups\Face
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ScannerTool", "Setups\ScannerTool\ScannerTool.vdproj", "{B1932201-C420-46BB-B82A-C9A010B979C6}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZaloTool.Tests", "tests\ZaloTool.Tests\ZaloTool.Tests.csproj", "{E1F2G3H4-I5J6-4K7L-8M9N-0O1P2Q3R4S5T}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OnlineTool", "OnlineTool", "{3B6A06F9-8335-407F-ACC6-27EEFB020746}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineTool.Server", "OnlineTool\Server\OnlineTool.Server.csproj", "{756E2C9B-302D-4001-8347-16641868D343}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineTool.Server", "src\OnlineTool\Server\OnlineTool.Server.csproj", "{756E2C9B-302D-4001-8347-16641868D343}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineTool.Client", "OnlineTool\Client\OnlineTool.Client.csproj", "{2070C3E3-4893-440A-BDFC-1080B49D6009}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineTool.Client", "src\OnlineTool\Client\OnlineTool.Client.csproj", "{2070C3E3-4893-440A-BDFC-1080B49D6009}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineTool.Shared", "OnlineTool\Shared\OnlineTool.Shared.csproj", "{EAF4E194-5AEA-4FBB-9D29-4037FF24720B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineTool.Shared", "src\OnlineTool\Shared\OnlineTool.Shared.csproj", "{EAF4E194-5AEA-4FBB-9D29-4037FF24720B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZaloTool", "ZaloTool\ZaloTool.csproj", "{D12BD689-D567-4F66-ACE4-B7B235854D02}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZaloTool", "src\ZaloTool\ZaloTool.csproj", "{D12BD689-D567-4F66-ACE4-B7B235854D02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +63,18 @@ Global
 		{D12BD689-D567-4F66-ACE4-B7B235854D02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D12BD689-D567-4F66-ACE4-B7B235854D02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D12BD689-D567-4F66-ACE4-B7B235854D02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8E5F0D1-1C9C-4D2A-8B8E-4E90B7D1A2C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8E5F0D1-1C9C-4D2A-8B8E-4E90B7D1A2C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8E5F0D1-1C9C-4D2A-8B8E-4E90B7D1A2C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8E5F0D1-1C9C-4D2A-8B8E-4E90B7D1A2C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9A1B2D3-E4F5-4D6F-8A9B-0C1D2E3F4A5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9A1B2D3-E4F5-4D6F-8A9B-0C1D2E3F4A5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9A1B2D3-E4F5-4D6F-8A9B-0C1D2E3F4A5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9A1B2D3-E4F5-4D6F-8A9B-0C1D2E3F4A5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1F2G3H4-I5J6-4K7L-8M9N-0O1P2Q3R4S5T}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1F2G3H4-I5J6-4K7L-8M9N-0O1P2Q3R4S5T}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1F2G3H4-I5J6-4K7L-8M9N-0O1P2Q3R4S5T}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1F2G3H4-I5J6-4K7L-8M9N-0O1P2Q3R4S5T}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

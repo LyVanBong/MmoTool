@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>MmoTool.OnlineTool.Server</AssemblyName>
+    <RootNamespace>MmoTool.OnlineTool.Server</RootNamespace>
+    <UserSecretsId>OnlineTool.Server-C0232BB4-3A13-4230-803E-4BD525C9FEAF</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" />
+    <PackageReference Include="Microsoft.AspNetCore.ApiAuthorization.IdentityServer" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Client\OnlineTool.Client.csproj" />
+    <ProjectReference Include="..\Shared\OnlineTool.Shared.csproj" />
+  </ItemGroup>
+</Project>

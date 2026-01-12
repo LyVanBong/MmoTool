@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>MmoTool.ScannerTool</AssemblyName>
+    <RootNamespace>MmoTool.ScannerTool</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ookii.Dialogs.Wpf" />
+    <PackageReference Include="Prism.DryIoc" />
+    <PackageReference Include="RestSharp" />
+    <PackageReference Include="Selenium.WebDriver" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+    <PackageReference Include="Microsoft.Extensions.Logging" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MmoTool.Shared\MmoTool.Shared.csproj" />
+    <ProjectReference Include="..\MmoTool.Core\MmoTool.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
