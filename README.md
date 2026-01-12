@@ -1,227 +1,153 @@
 # MmoTool Suite
 
-A comprehensive suite of automation tools for marketing and social media management, including tools for Facebook, Zalo, and general scanning functionality.
+Bộ công cụ tự động hóa toàn diện cho tiếp thị và quản lý mạng xã hội, bao gồm các công cụ dành cho Facebook, Zalo và các tính năng quét dữ liệu tổng hợp.
 
-## 📋 Overview
+## 📋 Tổng quan
 
-The MmoTool Suite consists of four main applications:
+MmoTool Suite bao gồm bốn ứng dụng chính:
 
-- **FacebookTool** - Desktop application for Facebook automation and cookie management
-- **ZaloTool** - Desktop application for Zalo marketing automation, including friend management and message sending
-- **ScannerTool** - Desktop application for scanning and data collection
-- **OnlineTool** - Web-based tool built with Blazor WebAssembly for online operations
+- **FacebookTool** - Ứng dụng desktop để tự động hóa Facebook và quản lý cookie.
+- **ZaloTool** - Ứng dụng desktop để tự động hóa marketing trên Zalo, bao gồm quản lý bạn bè và gửi tin nhắn.
+- **ScannerTool** - Ứng dụng desktop để quét và thu thập dữ liệu web.
+- **OnlineTool** - Công cụ dựa trên nền tảng web, được xây dựng bằng Blazor WebAssembly cho các hoạt động trực tuyến.
 
-## 🏗️ Solution Structure
+## 🏗️ Cấu trúc Solution
 
 ```
 MmoTool/
-├── src/                          # Source code
-│   ├── MmoTool.Shared/          # Shared utilities and services
-│   ├── MmoTool.Core/            # Core business logic
-│   ├── FacebookTool/            # Facebook automation tool (WPF)
-│   ├── ZaloTool/                # Zalo marketing tool (WPF)
-│   ├── ScannerTool/             # Scanner tool (WPF)
-│   └── OnlineTool/              # Web-based tool (Blazor)
+├── src/                          # Mã nguồn
+│   ├── MmoTool.Shared/          # Tiện ích và dịch vụ dùng chung
+│   ├── MmoTool.Core/            # Logic nghiệp vụ cốt lõi
+│   ├── FacebookTool/            # Công cụ tự động hóa Facebook (WPF)
+│   ├── ZaloTool/                # Công cụ marketing Zalo (WPF)
+│   ├── ScannerTool/             # Công cụ quét dữ liệu (WPF)
+│   └── OnlineTool/              # Công cụ nền web (Blazor)
 │       ├── Client/              # Blazor WebAssembly client
 │       ├── Server/              # ASP.NET Core server
-│       └── Shared/              # Shared models
-├── tests/                        # Unit and integration tests
-├── docs/                         # Documentation
-├── Setups/                       # Installation packages
-├── Directory.Build.props         # Common build properties
-├── Directory.Packages.props      # Central package management
-├── .editorconfig                 # Code style configuration
-└── MmoTool.sln                   # Visual Studio solution
-
+│       └── Shared/              # Models dùng chung cho Web
+├── tests/                        # Unit test và Integration tests
+├── docs/                         # Tài liệu hướng dẫn
+├── Setups/                       # Các gói cài đặt ứng dụng
+├── Directory.Build.props         # Cấu hình build chung
+├── Directory.Packages.props      # Quản lý package tập trung (CPM)
+├── .editorconfig                 # Cấu hình phong cách lập trình (Code style)
+└── MmoTool.sln                   # Solution Visual Studio
 ```
 
-## 🚀 Prerequisites
+## 🚀 Yêu cầu hệ thống
 
-- [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) or later
-- [Visual Studio 2022](https://visualstudio.microsoft.com/) (recommended) or Visual Studio Code
-- [Google Chrome](https://www.google.com/chrome/) (required for Selenium automation)
-- SQL Server (for OnlineTool) or SQLite (for ZaloTool)
+- [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) hoặc mới hơn.
+- [Visual Studio 2022](https://visualstudio.microsoft.com/) (khuyến nghị) hoặc Visual Studio Code.
+- [Google Chrome](https://www.google.com/chrome/) (yêu cầu cho Selenium automation).
+- SQL Server (cho OnlineTool) hoặc SQLite (cho ZaloTool).
 
-## 🔧 Getting Started
+## 🔧 Hướng dẫn bắt đầu
 
-### Clone the Repository
+### Tải mã nguồn
 
 ```bash
 git clone <repository-url>
 cd MmoTool
 ```
 
-### Restore Dependencies
+### Khôi phục các thư viện (Dependencies)
 
 ```bash
 dotnet restore MmoTool.sln
 ```
 
-### Build the Solution
+### Build Solution
 
 ```bash
 dotnet build MmoTool.sln --configuration Release
 ```
 
-### Run Individual Projects
+### Chạy các dự án
 
 #### FacebookTool
 ```bash
-dotnet run --project FacebookTool/FacebookTool.csproj
+dotnet run --project src/FacebookTool/FacebookTool.csproj
 ```
 
 #### ZaloTool
 ```bash
-dotnet run --project ZaloTool/ZaloTool.csproj
+dotnet run --project src/ZaloTool/ZaloTool.csproj
 ```
 
 #### ScannerTool
 ```bash
-dotnet run --project ScannerTool/ScannerTool.csproj
+dotnet run --project src/ScannerTool/ScannerTool.csproj
 ```
 
 #### OnlineTool (Server)
 ```bash
-dotnet run --project OnlineTool/Server/OnlineTool.Server.csproj
+dotnet run --project src/OnlineTool/Server/OnlineTool.Server.csproj
 ```
-Then navigate to `https://localhost:7xxx` in your browser.
+Sau đó truy cập `https://localhost:7xxx` trên trình duyệt của bạn.
 
-## 📦 Project Details
+## 📦 Chi tiết các dự án
 
 ### FacebookTool
-
-A WPF desktop application for Facebook automation tasks:
-- Cookie extraction and management
-- Automated Facebook interactions
-- Chrome browser automation using Selenium
-
-**Key Features:**
-- MVVM architecture with Prism framework
-- Selenium WebDriver integration
-- RESTful API communication
+Ứng dụng WPF dành cho các tác vụ tự động hóa Facebook:
+- Trích xuất và quản lý cookie.
+- Tương tác Facebook tự động.
+- Tự động hóa trình duyệt Chrome bằng Selenium.
 
 ### ZaloTool
-
-A WPF desktop application for Zalo marketing automation:
-- Account management
-- Friend requests via phone numbers
-- Automated message sending
-- SQLite database for data persistence
-
-**Key Features:**
-- Entity Framework Core with SQLite
-- Chrome profile management
-- Bulk operations support
-- MVVM pattern with Prism
+Ứng dụng WPF dành cho marketing trên Zalo:
+- Quản lý tài khoản Zalo.
+- Gửi lời mời kết bạn qua số điện thoại.
+- Gửi tin nhắn hàng loạt.
+- Sử dụng SQLite để lưu trữ dữ liệu cục bộ.
 
 ### ScannerTool
-
-A WPF desktop application for scanning and data collection:
-- Web scraping capabilities
-- Data extraction and processing
-- Chrome automation
-
-**Key Features:**
-- Selenium WebDriver integration
-- Customizable scanning functions
-- MVVM architecture
+Ứng dụng WPF để quét và thu thập dữ liệu:
+- Khả năng thu thập dữ liệu web (Web scraping).
+- Trích xuất và xử lý dữ liệu.
+- Tự động hóa Chrome.
 
 ### OnlineTool
+Ứng dụng web hiện đại dựa trên Blazor WebAssembly:
+- Hỗ trợ Progressive Web App (PWA).
+- Sử dụng ASP.NET Core Identity để xác thực.
+- Backend RESTful API mạnh mẽ.
 
-A modern web application built with Blazor WebAssembly:
-- Progressive Web App (PWA) support
-- ASP.NET Core Identity for authentication
-- RESTful API backend
+## 🧪 Kiểm thử (Testing)
 
-**Key Features:**
-- Blazor WebAssembly client
-- ASP.NET Core Web API
-- Entity Framework Core with SQL Server
-- Identity Server integration
-
-## 🧪 Testing
-
-Run all tests:
+Chạy tất cả các test:
 ```bash
 dotnet test MmoTool.sln
 ```
 
-Run tests for a specific project:
+Chạy test cho một project cụ thể:
 ```bash
 dotnet test tests/ZaloTool.Tests/ZaloTool.Tests.csproj
 ```
 
-## 📝 Configuration
+## 📝 Cấu hình
 
-Each desktop application uses `appsettings.json` for configuration:
+Mỗi ứng dụng desktop sử dụng file `appsettings.json` để cấu hình:
+- **FacebookTool**: Cấu hình Chrome driver, log.
+- **ZaloTool**: Kết nối Database, đường dẫn Chrome profile, link tải dữ liệu.
+- **ScannerTool**: Các thiết lập riêng cho việc quét dữ liệu.
 
-- **FacebookTool**: Chrome driver settings, logging configuration
-- **ZaloTool**: Database connection, Chrome profile path, download URLs
-- **ScannerTool**: Application-specific settings
-- **OnlineTool**: Database connection, authentication settings
+## 🏗️ Kiến trúc
 
-Example `appsettings.json`:
-```json
-{
-  "Logging": {
-    "LogLevel": {
-      "Default": "Information",
-      "Microsoft": "Warning"
-    }
-  },
-  "ConnectionStrings": {
-    "DefaultConnection": "Data Source=app.db"
-  }
-}
-```
+Solution tuân thủ các tiêu chuẩn phát triển .NET hiện đại:
+- **Mô hình MVVM**: Tất cả ứng dụng WPF sử dụng Model-View-ViewModel.
+- **Dependency Injection**: Sử dụng Prism cho desktop và DI mặc định cho web.
+- **Phân tách trách nhiệm**: Tách biệt logic nghiệp vụ khỏi mã giao diện.
+- **Quản lý Package tập trung**: Đảm bảo phiên bản thư viện đồng nhất.
 
-## 🏗️ Architecture
+## 🤝 Đóng góp
 
-The solution follows modern .NET development practices:
+Vui lòng đọc file [CONTRIBUTING.md](CONTRIBUTING.md) để biết chi tiết về quy tắc ứng xử và quy trình gửi Pull Request.
 
-- **MVVM Pattern**: All WPF applications use Model-View-ViewModel pattern
-- **Dependency Injection**: Prism framework for DI in desktop apps, built-in DI for web apps
-- **Separation of Concerns**: Business logic separated from UI code
-- **Repository Pattern**: Data access abstraction
-- **Central Package Management**: Consistent package versions across projects
+## 📄 Bản quyền
 
-## 🤝 Contributing
+Dự án này được cấp phép theo giấy phép MIT - xem file [LICENSE](LICENSE) để biết chi tiết.
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+## 🔄 Lịch sử phiên bản
 
-### Code Style
-
-This project uses EditorConfig for consistent code style. Please ensure your IDE respects the `.editorconfig` file.
-
-Key conventions:
-- Use 4 spaces for indentation
-- Use PascalCase for public members
-- Use camelCase with underscore prefix for private fields (`_fieldName`)
-- Interfaces should start with `I` (e.g., `IService`)
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🐛 Known Issues
-
-- Chrome driver version must match installed Chrome browser version
-- ZaloTool requires Chrome profile setup on first run
-
-## 📞 Support
-
-For issues and questions:
-- Create an issue in the repository
-- Check existing documentation in the `docs/` folder
-
-## 🔄 Version History
-
-- **2.0.0** - Major restructuring with .NET 8.0, improved architecture, and shared libraries
-- **1.0.0** - Initial release
-
-## 🙏 Acknowledgments
-
-- [Prism Library](https://prismlibrary.com/) - MVVM framework
-- [Selenium WebDriver](https://www.selenium.dev/) - Browser automation
-- [Entity Framework Core](https://docs.microsoft.com/ef/core/) - ORM
-- [RestSharp](https://restsharp.dev/) - HTTP client library
+- **2.0.0** - Tái cấu trúc lớn với .NET 8.0, chuẩn hóa kiến trúc doanh nghiệp và thư viện dùng chung.
+- **1.0.0** - Phiên bản phát hành đầu tiên.
